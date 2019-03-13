@@ -17,7 +17,7 @@ public class TestSteps implements En {
             this.response = RestAssured.given().request().get(new URL(this.endpointUrl));
         });
         Then("response status should be {int}", (Integer status) -> {
-            response.then().assertThat().statusCode(200);
+            response.then().assertThat().statusCode(status);
         });
         Then("number in response body should be {int}", (Integer number) -> {
             response.then().assertThat().body("number", Matchers.equalTo(number));

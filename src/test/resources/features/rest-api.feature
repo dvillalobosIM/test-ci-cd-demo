@@ -18,7 +18,13 @@ Feature: Create rest service that return integer number depending on alphabetica
     Then response status should be 200
     And number in response body should be 3
 
-  Scenario: Send request with "four" value
+  Scenario: Send request with "three" value
+    Given Request with "four" as parameter
+    When send the request
+    Then response status should be 200
+    And number in response body should be 4
+
+  Scenario: Send request with "five" value
     Given Request with "three" as parameter
     When send the request
     Then response status should be 404

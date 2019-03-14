@@ -31,6 +31,6 @@ Feature: Create rest service that return integer number depending on alphabetica
     And number in response body should be 5
 
   Scenario: Send request with "six" value
-    Given Request with "five" as parameter
+    Given Request with "six" as parameter
     When send the request
     Then response status should be 404
